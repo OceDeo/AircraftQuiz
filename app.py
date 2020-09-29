@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, session, url_for, redirect, g
 import aircraft_scrapdata
 
+# preload all 10 questions
+
 app = Flask(__name__)
 
 app.secret_key = 'dYIbV9GL3VtVyGWq2tpjndfuig6d3278gbz6T80WjuY'
 
 @app.route('/question', methods = ['GET', 'POST'])
-def question():
+def question(): # page with question
 
     manufacturer_list = ['Embraer', 'Antonov', "ATR", 'Bombardier', 'Cessna', 'Fokker', 'Tupolev', 'Ilyushin', 'Boeing', 'Airbus']
 
@@ -39,3 +41,4 @@ def question():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
