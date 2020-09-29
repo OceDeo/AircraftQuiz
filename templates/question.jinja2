@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+</head>
+    <body>
+        <form method="POST">
+            <li>
+                {% for i in manufacturer_list %}
+                    <button type="button" class = {{i}} name = "choice" value = {{i}}>{{i}}</button>
+                {%endfor%}
+            </li>
+        </form>
+    </body>
+</html>
+
